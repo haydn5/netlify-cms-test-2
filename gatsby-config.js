@@ -13,8 +13,24 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/static/assets`,
+        name: 'images',
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `content`,
+        path: `${__dirname}/content`,
+      },
+    },
     `gatsby-plugin-netlify-cms`,
+    `netlify-cms-app`,
     `gatsby-transformer-sharp`,
+    'gatsby-transformer-remark',
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
