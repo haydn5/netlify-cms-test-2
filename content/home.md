@@ -1,5 +1,5 @@
 ---
-title: Ruby the Schnauzer
+title: Ruby the Schnauzer Schnauzer
 intro: >-
   Welcome to the website of Ruby the Schnauzer. Ruby is a strong, confident
   woman with 77 dog years of wisdom behind her. She likes snacks, sleeping,
