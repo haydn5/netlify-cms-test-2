@@ -17,4 +17,4 @@ collections:
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Intro text, name: intro, widget: text}
-          - {label: Image, name: image, widget: image}
+          - {label: Image, name: image, required: false, widget: image}
