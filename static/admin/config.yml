@@ -24,4 +24,4 @@ collections:
           - {label: Image 3, name: image3, widget: image}
           - {label: Image 3 - Alt Info, name: image3alt, widget: string }
           - {label: Image 4, name: image4, widget: image}
-          - {label: Image 4 - Alt Info, name: imagealt, widget: string }
+          - {label: Image 4 - Alt Info, name: image4alt, widget: string }
