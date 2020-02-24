@@ -4,6 +4,7 @@ import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 // import Image from "../components/image"
 import SEO from "../components/seo"
+import Header2 from "../components/header2"
 
 import { Carousel, Image, Container } from 'react-bootstrap';
 
@@ -14,22 +15,24 @@ const IndexPage = (props) => {
       <SEO title="Home" />
       <h1>{data.title}</h1>
       <p>{data.intro}</p>
+      <p><Header2 imageInfo={data.image1} /></p>
       <p>Test Test</p>
-      <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      </div>
       <p>
       
       </p>
       <Container>
         <Carousel>
           <Carousel.Item>
-            <Image src={data.image} alt={data.intro} fluid />
+            <Image src={data.image1} alt={data.image1alt} fluid />
           </Carousel.Item>
           <Carousel.Item>
-            <Image src={data.image} alt={data.intro} fluid />
+            <Image src={data.image2} alt={data.image2alt} fluid />
           </Carousel.Item>
           <Carousel.Item>
-            <Image src={data.image} alt={data.intro} fluid />
+            <Image src={data.image3} alt={data.image3alt} fluid />
+          </Carousel.Item>
+          <Carousel.Item>
+            <Image src={data.image4} alt={data.image4alt} fluid />
           </Carousel.Item>
         </Carousel>
       </Container>
@@ -56,7 +59,14 @@ export const query = graphql`
             frontmatter {
               title
               intro
-              image
+              image1
+              image1alt
+              image2
+              image2alt
+              image3
+              image3alt
+              image4
+              image4alt
           }
         }
       }
