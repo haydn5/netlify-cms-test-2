@@ -2,8 +2,10 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
+// import Image from "../components/image"
 import SEO from "../components/seo"
+
+import { Carousel, Image, Container } from 'react-bootstrap';
 
 const IndexPage = (props) => {
   const data = props.data.allFile.edges[0].node.childMarkdownRemark.frontmatter
@@ -12,13 +14,35 @@ const IndexPage = (props) => {
       <SEO title="Home" />
       <h1>{data.title}</h1>
       <p>{data.intro}</p>
+      <p>Test Test</p>
       <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-        <Image />
       </div>
-      <img src={data.image} alt='Ruby' />
+      <p>
+      
+      </p>
+      <Container>
+        <Carousel>
+          <Carousel.Item>
+            <Image src={data.image} alt={data.intro} fluid />
+          </Carousel.Item>
+          <Carousel.Item>
+            <Image src={data.image} alt={data.intro} fluid />
+          </Carousel.Item>
+          <Carousel.Item>
+            <Image src={data.image} alt={data.intro} fluid />
+          </Carousel.Item>
+        </Carousel>
+      </Container>
+      
+
+
+
+      
+      
       <Link to="/page-2/">Go to page 2</Link>
     </Layout>
   )
+
 }
 
 export default IndexPage
